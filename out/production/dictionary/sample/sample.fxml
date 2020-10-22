@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="550.0" prefWidth="200.0" style="-fx-background-color: #2D75E8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="35.0" layoutY="459.0" mnemonicParsing="false" onAction="#Delete" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: red;" text="Delete" />
+            <Button layoutX="35.0" layoutY="408.0" mnemonicParsing="false" onAction="#Edit" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: orange;" text="Update" />
+            <Button layoutX="35.0" layoutY="358.0" mnemonicParsing="false" onAction="#add_word" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: green;" text="Add" />
+            <TextField fx:id="txt_viet" layoutX="13.0" layoutY="307.0" prefHeight="30.0" prefWidth="180.0" promptText="Vietnamese" />
+            <TextField fx:id="txt_eng" layoutX="13.0" layoutY="259.0" prefHeight="30.0" prefWidth="180.0" promptText="English" />
+            <TextField fx:id="txt_id" layoutX="13.0" layoutY="213.0" onMouseClicked="#getSelected" prefHeight="30.0" prefWidth="180.0" promptText="ID" />
+            <Label layoutX="21.0" layoutY="43.0" prefHeight="17.0" prefWidth="167.0" text="OFFLINE VERSION" textFill="#fffdfd">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="117.0" fitWidth="140.0" layoutX="38.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="45.0">
+               <image>
+                  <Image url="@../image/320x0w.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="34.0" layoutY="503.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #FFD700;" text="BOOK MARK" />
+            <Button layoutX="10.0" layoutY="3.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="61.0" style="-fx-background-color: #2D75E8;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="121.0" onDragDetected="#back" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8-go-back-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table" layoutX="212.0" layoutY="73.0" prefHeight="447.0" prefWidth="523.0" style="-fx-background-color: #EBF5FB;">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="40.0" text="ID" />
+          <TableColumn fx:id="col_english" prefWidth="166.0" text="English" />
+            <TableColumn fx:id="col_vietnamese" prefWidth="316.0" text="Vietnamese" />
+        </columns>
+      </TableView>
+      <TextField fx:id="filterField" layoutX="208.0" layoutY="18.0" prefHeight="30.0" prefWidth="523.0" promptText="TÌM KIẾM" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="root" prefHeight="540.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.searchController">
+   <children>
+      <TextField fx:id="wordSearch" layoutX="40.0" layoutY="152.0" prefHeight="25.0" prefWidth="196.0" />
+      <Button fx:id="search" layoutX="239.0" layoutY="152.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8-search-500.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ListView fx:id="wordRcm" layoutX="51.0" layoutY="106.0" prefHeight="314.0" prefWidth="239.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" />
+      <VBox layoutX="307.0" layoutY="56.0" prefHeight="314.0" prefWidth="419.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
+         <children>
+            <TextArea fx:id="wordMeaning" prefHeight="356.0" prefWidth="419.0" />
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="138.0" prefWidth="750.0" style="-fx-background-color: #1E90FF;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8-great-britain-96.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="190.0" layoutY="53.0" text="DICTIONARY ENGLISH - VIETNAMESE" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="589.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8-vietnam-96%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="291.0" layoutY="151.0" prefHeight="27.0" prefWidth="419.0">
+         <children>
+            <TextField fx:id="wordName" prefHeight="25.0" prefWidth="384.0" />
+            <Button mnemonicParsing="false" onAction="#sound">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="28.0" onDragDetected="#sound" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8-sound-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <Button layoutX="40.0" layoutY="524.0" mnemonicParsing="false" onAction="#back" prefHeight="38.0" prefWidth="19.0" AnchorPane.bottomAnchor="0.0">
+         <graphic>
+            <ImageView fitHeight="46.0" fitWidth="29.0" onDragDetected="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8-back-arrow-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

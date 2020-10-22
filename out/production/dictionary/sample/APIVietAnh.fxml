@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.APIVietAnhController">
+   <children>
+      <AnchorPane prefHeight="185.0" prefWidth="750.0" style="-fx-background-color: #1E90FF;" AnchorPane.bottomAnchor="365.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="152.0" layoutY="50.0" prefHeight="35.0" prefWidth="316.0" text="VIETNAMESE TO ENGLISH" textFill="#fcfafa">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon fill="#f2eeee" glyphName="HOME" layoutX="56.0" layoutY="106.0" size="7em" text="" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="200.0" prefHeight="367.0" prefWidth="750.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="80.0" layoutY="40.0" text="Search for the word here" AnchorPane.leftAnchor="65.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchBar" layoutX="264.0" layoutY="41.0" prefHeight="25.0" prefWidth="257.0" style="-fx-background-color: #FFFAFA;" />
+            <Button fx:id="Button" layoutX="641.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleAction" style="-fx-background-color: #1E90FF;" text="Search" AnchorPane.rightAnchor="65.0" />
+            <TextArea fx:id="textArea" layoutX="64.0" layoutY="84.0" prefHeight="241.0" prefWidth="600.0" style="-fx-background-color: #000080;" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" />
+            <Button layoutX="591.0" layoutY="302.0" mnemonicParsing="false" onAction="#sound">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="27.0" onDragDetected="#sound" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8-sound-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="11.0" layoutY="329.0" mnemonicParsing="false" onAction="#back">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="23.0" onDragDetected="#back" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8-back-arrow-96.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
